@@ -25,6 +25,7 @@ New-ItemProperty -Path "HKLM:Software\Wow6432Node\Microsoft\Windows\CurrentVersi
 New-ItemProperty -Path HKLM:Software\Microsoft\ServerManager -Name DoNotOpenServerManagerAtLogon -PropertyType DWord -Value 1 -Force
 
 # Enable Remote Desktop Connections
+# server 2012: PropertyType = Type
 Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -name fDenyTSConnections -PropertyType DWord -Value 0 -Force
 
 # Be careful ... displaygroup translated at OS level
